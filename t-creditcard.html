@@ -47,17 +47,17 @@
     </style>
         <div class="layout vertical section">
             <div class="vertical-margin">
-                <t-cc-input label="Card number" card-type="{{cardType}}"  id="number" name="number" error-message="Enter card number" required auto-validate></t-cc-input>
+                <t-cc-input label="Card number" card-type="{{cardType}}"  id="number" name="number" error-message="You missed this." required auto-validate></t-cc-input>
             </div>
             <div class="vertical-margin">
-                <t-input auto-validate label="Name on card" name="nameOnCard"  id="nameOnCard" error-message="Enter name on card" required></t-input>
+                <t-input auto-validate label="Name on card" name="nameOnCard"  id="nameOnCard" error-message="You missed this." required></t-input>
             </div>
             <div class="vertical-margin layout horizontal">
                 <div class="horizontal-margin flex">
-                    <t-cc-expiration-input name="expiryDate" id="expiryDate" error-message="Enter expiry date" required auto-validate></t-cc-expiration-input>
+                    <t-cc-expiration-input name="expiryDate" id="expiryDate" error-message="You missed this." required auto-validate></t-cc-expiration-input>
                 </div>
                 <div class="flex">
-                    <t-cc-cvc-input name="securityCode" id="securityCode" card-type="[[cardType]]" error-message="Enter code" required auto-validate></t-cc-cvc-input>
+                    <t-cc-cvc-input name="securityCode" id="securityCode" card-type="[[cardType]]" error-message="You missed this." required auto-validate></t-cc-cvc-input>
                 </div>
             </div>
 
@@ -91,10 +91,7 @@ Polymer({
         }
 
     },
-    listeners: {
-      'submit.tap': 'submitFunction'
-    },
-
+    
     validate: function() {
         var isValid = true;
         this.fields = this.querySelectorAll('[name]')

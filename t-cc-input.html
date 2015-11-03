@@ -53,7 +53,7 @@ style this element.
 -->
 <dom-module id="t-cc-input">
     <template>
-        <style>
+        <style include="shared-styles">
         :host {
             display: block;
         }
@@ -90,13 +90,13 @@ style this element.
                 border-radius: 0!important;
                 border: 0;
                 border-bottom: 1px solid;
+                border-color: var(--t-input-border-color, #bbbbbb);
             }
         }
             :host.invalid-input  ::content .input {
               border-color:  var(--error-theme-color,--error-color)!important;
             }
         </style>
-        <style include="shared-styles"></style>
         <t-input-container id="container" disabled$="[[disabled]]" no-label-float="[[noLabelFloat]]" always-float-label="[[_computeAlwaysFloatLabel(alwaysFloatLabel,placeholder)]]" invalid="[[invalid]]">
             <label hidden$="[[!label]]">[[label]]</label>
             <div class="horizontal layout center input">

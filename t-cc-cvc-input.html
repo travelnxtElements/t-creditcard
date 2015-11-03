@@ -61,7 +61,7 @@ style this element.
 
 <dom-module id="t-cc-cvc-input">
   <template>
-  <style>
+  <style include="shared-styles">
   :host {
     display: block;
   }
@@ -71,6 +71,7 @@ style this element.
   }
   #input{
       border:0;
+    margin-bottom: 0;
   }
   .input{
     border-radius: var(--standard-border-radius,2px);
@@ -91,11 +92,10 @@ style this element.
       border:0;
       border-radius: 0!important;
       border-bottom: 1px solid;
+        border-color: var(--t-input-border-color,#bbbbbb);
     }
   }
   </style>
-
-    <style include="shared-styles"></style>
     <t-input-container id="container"
         disabled$="[[disabled]]"
         no-label-float="[[noLabelFloat]]"
@@ -147,7 +147,7 @@ style this element.
        */
       label: {
         type: String,
-        value: 'CVC'
+        value: 'Security code'
       },
 
       /**
