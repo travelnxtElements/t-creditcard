@@ -57,7 +57,7 @@
                     <t-cc-expiration-input name="expiryDate" id="expiryDate" error-message="You missed this." required auto-validate></t-cc-expiration-input>
                 </div>
                 <div class="flex">
-                    <t-cc-cvc-input name="securityCode" id="securityCode" card-type="[[cardType]]" error-message="You missed this." required auto-validate></t-cc-cvc-input>
+                    <t-cc-cvc-input cvc-password="[[cvcPassword]]" name="securityCode" id="securityCode" card-type="[[cardType]]" error-message="You missed this." required auto-validate></t-cc-cvc-input>
                 </div>
             </div>
 
@@ -88,7 +88,15 @@ Polymer({
             value: function() {
                 return [];
            }
-        }
+        },
+
+          /**
+           * This is to set cvc input as password.
+           */
+          cvcPassword: {
+            type: Boolean,
+            value: false
+          }
 
     },
     

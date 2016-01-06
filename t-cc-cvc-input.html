@@ -84,6 +84,10 @@ style this element.
   :host.invalid-input  ::content paper-input-error[invalid] {
     visibility: visible;
   }
+
+  :host([cvc-password]) #input{
+    -webkit-text-security: disc;
+  }
   @media (max-width:600px){
     #input{
       border:0!important;
@@ -105,7 +109,7 @@ style this element.
       <label hidden$="[[!label]]">[[label]]</label>
 
       <div class="horizontal layout center input">
-        <input is="iron-input" id="input" type="password" class="flex"
+        <input is="iron-input" id="input" type="tel" class="flex"
             aria-labelledby$="[[_ariaLabelledBy]]"
             aria-describedby$="[[_ariaDescribedBy]]"
             bind-value="{{value}}"
@@ -156,6 +160,16 @@ style this element.
       cardType: {
         type: String,
         value: ''
+      },
+
+
+      /**
+       * This is to set cvc input as password.
+       */
+      cvcPassword: {
+        type: Boolean,
+        value: false,
+        reflectToAttribute:true
       },
 
       _requiredLength: {
