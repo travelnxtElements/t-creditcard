@@ -140,10 +140,16 @@ style this element.
                 notify: true
             },
 
+            /**
+             * The value of the component as a string with space according to the card type.
+             */
             value: {
                 observer: '_onValueChanged'
             },
 
+            /**
+             * The value of the component without space as a string.
+             */
             formattedValue: {
                 type: String,
                 value: '',

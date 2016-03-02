@@ -4,9 +4,6 @@
 <link rel="import" href="t-cc-cvc-input.html" />
 <link rel="import" href="t-cc-expiration-input.html" />
 <link rel="import" href="t-cc-input.html" />
-<link rel="import" href="t-email-input.html" />
-<link rel="import" href="t-phone-input.html" />
-<link rel="import" href="t-zip-input.html" />
 <!--
     `<t-creditcard>` is a polymer component that generates a playground for interacting with components.
 
@@ -100,6 +97,12 @@ Polymer({
 
     },
     
+    /**
+     * Returns true if the element has a valid value, and sets the visual
+     * error state.
+     *
+     * @return {boolean} Whether the input is currently valid or not.
+     */
     validate: function() {
         var isValid = true;
         this.fields = this.querySelectorAll('[name]')
@@ -111,6 +114,11 @@ Polymer({
         return isValid;
     },
 
+    /**
+     * Returns the submit object of the form
+     *
+     * @return {object} 
+     */
     getInfo: function() {
         var date = new Date();
         date = date.getFullYear().toString();

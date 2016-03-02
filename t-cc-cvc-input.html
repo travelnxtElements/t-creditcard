@@ -162,6 +162,13 @@ style this element.
         value: ''
       },
 
+      /**
+       * The value of the component as a string.
+       */
+      value: {
+        observer: '_onValueChanged'
+      },
+
 
       /**
        * This is to set cvc input as password.
@@ -180,10 +187,6 @@ style this element.
       _amex: {
         type: Boolean,
         computed: '_computeIsAmex(cardType)'
-      },
-
-      value: {
-        observer: '_onValueChanged'
       }
     },
 
