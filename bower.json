@@ -31,20 +31,12 @@
     "iron-input": "PolymerElements/iron-input#^1.0.6",
     "iron-validatable-behavior": "PolymerElements/iron-validatable-behavior#^1.0.4",
     "iron-validator-behavior": "PolymerElements/iron-validator-behavior#^1.0.1",
-    "paper-input": "PolymerElements/paper-input#^1.0.12",
-    "t-address": "travelnxtElements/t-address#master",
-    "t-input": "atomelements/t-input#master",
-    "t-shared-components": "atomelements/t-shared-components#master",
+    "t-input": "atomelements/t-input#^1.0.0",
     "polymer": "Polymer/polymer#^1.0.0"
   },
   "devDependencies": {
     "webcomponentsjs": "~0.7.14",
+    "t-shared-components": "atomelements/t-shared-components#^1.0.0",
     "iron-component-page": "PolymerElements/iron-component-page#~1.0.6"
-  },
-  "resolutions": {
-    "paper-styles": "^1.1.0",
-    "t-input": "master",
-    "t-shared-components": "master",
-    "t-address": "master"
   }
 }
