@@ -53,49 +53,25 @@ style this element.
 -->
 <dom-module id="t-cc-input">
     <template>
-        <style include="shared-styles">
-        :host {
-            display: block;
-        }
-        /* Use a container so that when hiding the icon, the layout doesn't jump around. */
-        
-        .icon-container {
-            margin-left: 10px;
-            height: 27px;
-        }
-        
-        iron-icon {
-            --iron-icon-width: 40px;
-            --iron-icon-height: 24px;
-        }
-        
-        #input {
-            border: 0;
-        }
-        
-        .input {
-            border-radius: var(--standard-border-radius, 2px);
-            border-color: var(--t-input-border-color, #bbbbbb);
-            border: 1px solid;
-        }
-          :host.invalid-input  ::content paper-input-error[invalid] {
-            visibility: visible;
-          }
-        
-        @media (max-width:600px) {
-            #input {
-                border: 0!important;
-            }
-            .input {
-                border-radius: 0!important;
-                border: 0;
-                border-bottom: 1px solid;
-                border-color: var(--t-input-border-color, #bbbbbb);
-            }
-        }
-            :host.invalid-input  ::content .input {
-              border-color:  var(--error-theme-color,--error-color)!important;
-            }
+        <style>
+        ::host {
+      display: block;
+    }
+    /* Use a container so that when hiding the icon, the layout doesn't jump around. */
+    .icon-container {
+      margin-left: 10px;
+      height: 24px;
+    }
+    iron-icon {
+      --iron-icon-width: 40px;
+      --iron-icon-height: 24px;
+    }
+    .container {
+      @apply(--layout-horizontal);
+    }
+    .input{
+        width: 100%;
+    }
         </style>
         <t-input-container id="container" disabled$="[[disabled]]" no-label-float="[[noLabelFloat]]" always-float-label="[[_computeAlwaysFloatLabel(alwaysFloatLabel,placeholder)]]" invalid="[[invalid]]">
             <label hidden$="[[!label]]">[[label]]</label>

@@ -61,7 +61,7 @@ style this element.
 
 <dom-module id="t-cc-cvc-input">
   <template>
-  <style include="shared-styles">
+  <style >
   :host {
     display: block;
   }
@@ -69,36 +69,7 @@ style this element.
   iron-icon {
     margin-left: 10px;
   }
-  #input{
-      border:0;
-    margin-bottom: 0;
-  }
-  .input{
-    border-radius: var(--standard-border-radius,2px);
-    border-color: var(--t-input-border-color,#bbbbbb);
-    border: 1px solid;
-  }
-  :host.invalid-input  ::content .input {
-    border-color:  var(--error-theme-color,--error-color)!important;
-  }
-  :host.invalid-input  ::content paper-input-error[invalid] {
-    visibility: visible;
-  }
-
-  :host([cvc-password]) #input{
-    -webkit-text-security: disc;
-  }
-  @media (max-width:600px){
-    #input{
-      border:0!important;
-    }
-    .input{
-      border:0;
-      border-radius: 0!important;
-      border-bottom: 1px solid;
-        border-color: var(--t-input-border-color,#bbbbbb);
-    }
-  }
+ 
   </style>
     <t-input-container id="container"
         disabled$="[[disabled]]"
