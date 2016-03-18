@@ -1,9 +1,9 @@
 <!-- We are still creating this components -->
 <link rel="import" href="../polymer/polymer.html" />
-<link rel="import" href="../t-address/t-address.html" />
 <link rel="import" href="t-cc-cvc-input.html" />
 <link rel="import" href="t-cc-expiration-input.html" />
 <link rel="import" href="t-cc-input.html" />
+<link rel="import" href="../t-text-container/travel-element-styles.html" />
 <!--
     `<t-creditcard>` is a polymer component that generates a playground for interacting with components.
 
@@ -21,35 +21,25 @@
 -->
 <dom-module id="t-creditcard">
     <template>
-    <style>
+    <style include="travel-element-styles">
     :host {
-        width: 100%;
-        -webkit-box-sizing: border-box;
-        -moz-box-sizing: border-box;
-        box-sizing: border-box;
-    /* }
-    :host,t-cc-cvc-input{ */
-        overflow: hidden;
+        display: block;
     }
-    .vertical-margin {
-        margin-bottom: 10px;
-    }
-    
     .horizontal-margin {
         padding-right: 5px;
     }
-    .section{
+    .section-horizontal{
         padding: 0 10px;
     }
     </style>
-        <div class="layout vertical section">
-            <div class="vertical-margin">
+        <div class="layout vertical section-horizontal">
+            <div class="margin-bottom-medium">
                 <t-cc-input label="Card number" card-type="{{cardType}}"  id="number" name="number" error-message="You missed this." required auto-validate></t-cc-input>
             </div>
-            <div class="vertical-margin">
+            <div class="margin-bottom-medium">
                 <t-input auto-validate label="Name on card" name="nameOnCard"  id="nameOnCard" error-message="You missed this." required></t-input>
             </div>
-            <div class="vertical-margin layout horizontal">
+            <div class="margin-bottom-medium layout horizontal">
                 <div class="horizontal-margin flex">
                     <t-cc-expiration-input name="expiryDate" id="expiryDate" error-message="Invalid date." required auto-validate></t-cc-expiration-input>
                 </div>
