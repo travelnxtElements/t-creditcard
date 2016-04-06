@@ -4,6 +4,7 @@
 <link rel="import" href="t-cc-expiration-input.html" />
 <link rel="import" href="t-cc-input.html" />
 <link rel="import" href="../t-text-container/travel-element-styles.html" />
+<link rel="import" href="../iron-flex-layout/iron-flex-layout-classes.html">
 <!--
     `<t-creditcard>` is a polymer component that generates a playground for interacting with components.
 
@@ -21,6 +22,7 @@
 -->
 <dom-module id="t-creditcard">
     <template>
+    <style include="iron-flex"></style>
     <style include="travel-element-styles">
     :host {
         display: block;
