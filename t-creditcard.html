@@ -39,7 +39,7 @@
                 <t-cc-input label="Card number" card-type="{{cardType}}"  id="number" name="number" error-message="You missed this." required ></t-cc-input>
             </div>
             <div class="margin-bottom-medium">
-                <t-input  label="Name on card" name="nameOnCard"  id="nameOnCard" error-message="You missed this." required></t-input>
+                <t-input  label="Name on card" name="nameOnCard"  id="nameOnCard" pattern="^[a-zA-Z\d.' ]+" error-message="You missed this." required></t-input>
             </div>
             <div class="margin-bottom-medium layout horizontal">
                 <div class="horizontal-margin flex">
