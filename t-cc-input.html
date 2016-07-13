@@ -210,9 +210,9 @@ style this element.
                 this.$.icon.hidden = true;
             }
             if(!valid){
-                this.classList.add('invalid-input');
+                this.$.container.classList.add('invalid-input');
               }else{
-                this.classList.remove('invalid-input');
+                this.$.container.classList.remove('invalid-input');
               }
             return valid;
         },

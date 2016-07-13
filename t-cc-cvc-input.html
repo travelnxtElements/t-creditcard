@@ -215,9 +215,9 @@ style this element.
         invalid: !valid
       });
       if(!valid){
-        this.classList.add('invalid-input');
+        this.$.container.classList.add('invalid-input');
       }else{
-        this.classList.remove('invalid-input');
+        this.$.container.classList.remove('invalid-input');
       }
       return valid;
     },
