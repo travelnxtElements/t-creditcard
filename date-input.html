@@ -12,6 +12,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
 <link rel="import" href="../iron-input/iron-input.html">
 <link rel="import" href="../iron-flex-layout/iron-flex-layout-classes.html" />
 <link rel="import" href="../iron-validatable-behavior/iron-validatable-behavior.html">
+<link rel="import" href="../iron-behaviors/iron-control-state.html">
 <link rel="import" href="date-validator.html">
 
 <dom-module id="date-input">
@@ -93,7 +94,8 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
     is: 'date-input',
 
     behaviors: [
-      Polymer.IronValidatableBehavior
+      Polymer.IronValidatableBehavior,
+      Polymer.IronControlState
     ],
 
     properties: {
@@ -153,6 +155,10 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
     },
 
     validate: function() {
+    setTimeout(function () {
+      if (this.focused) {
+          return true;
+      }
       // Empty, non-required input is valid.
       if (!this.required && this.month == '' && this.year == '') {
         return true;
@@ -160,6 +166,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
       this.invalid = !this.$.validator.validate(this.date);
       this.fire('iron-input-validate');
       return !this.invalid;
+      }.bind(this),100);
     },
 
     _computeAriaLabel: function(dateLabel, monthLabel) {
