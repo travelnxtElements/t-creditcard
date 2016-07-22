@@ -32,7 +32,7 @@
     "iron-validatable-behavior": "PolymerElements/iron-validatable-behavior#^1.0.4",
     "iron-validator-behavior": "PolymerElements/iron-validator-behavior#^1.0.1",
     "t-input": "atomelements/t-input#^1.0.0",
-    "t-text-container": "travelnxtElements/t-text-container#^0.0.0",
+    "t-text-container": "travelnxtElements/t-text-container#^1.0.0",
     "polymer": "Polymer/polymer#^1.0.0"
   },
   "devDependencies": {
